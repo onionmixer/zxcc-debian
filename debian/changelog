@@ -1,0 +1,8 @@
+zxcc (0.5.7-1) unstable; urgency=medium
+
+  * Initial Debian packaging.
+  * CP/M 2/3 emulator for cross-compiling and running CP/M tools.
+  * Includes fixes for file tracking with re-used CP/M FCBs.
+  * Supports HI-TECH Z80 C compiler and other CP/M development tools.
+
+ -- Tony Nicholson <agn453@gmail.com>  Sun, 05 Jan 2026 12:00:00 +0900

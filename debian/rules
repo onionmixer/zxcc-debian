@@ -1,0 +1,19 @@
+#!/usr/bin/make -f
+
+export DH_VERBOSE = 1
+
+%:
+	dh $@
+
+override_dh_auto_clean:
+	[ ! -f Makefile ] || dh_auto_clean
+
+override_dh_auto_configure:
+	./update-configure.sh || true
+	dh_auto_configure -- --with-filetracker --with-cpmio --with-readline
+
+override_dh_auto_install:
+	dh_auto_install
+	mkdir -p $(CURDIR)/debian/zxcc/usr/lib/cpm/bin80
+	mkdir -p $(CURDIR)/debian/zxcc/usr/lib/cpm/lib80
+	mkdir -p $(CURDIR)/debian/zxcc/usr/lib/cpm/include80

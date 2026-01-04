@@ -1,0 +1,34 @@
+Source: zxcc
+Section: devel
+Priority: optional
+Maintainer: Tony Nicholson <agn453@gmail.com>
+Build-Depends: debhelper-compat (= 13),
+               autotools-dev,
+               automake,
+               libtool,
+               libncurses-dev,
+               libreadline-dev,
+               lynx
+Standards-Version: 4.6.2
+Homepage: https://github.com/agn453/ZXCC
+Vcs-Git: https://github.com/agn453/ZXCC.git
+Vcs-Browser: https://github.com/agn453/ZXCC
+Rules-Requires-Root: no
+
+Package: zxcc
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: CP/M 2/3 emulator for cross-compiling and running CP/M tools
+ ZXCC is John Elliott's CP/M 2/3 emulator that allows cross-compiling
+ and running CP/M tools under Linux/Unix/macOS.
+ .
+ This package includes the following utilities:
+  - zxcc: CP/M program executor
+  - zxc: C compiler front-end for HI-TECH C
+  - zxas: Assembler front-end
+  - zxlibr: Library manager front-end
+  - zxlink: Linker front-end
+  - zxobjtohex: Object to HEX converter
+ .
+ It is particularly useful for running the HI-TECH Z80 C compiler
+ and other CP/M development tools on modern systems.
